@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./contact.css">
+    <script src="contact.js"></script>
+
+    <title>Contact</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/home">Accueil</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+
+        <form action="/sendEmail" method="post">
+
+            <label for="nom">nom</label>
+            <input placeholder="Dupont" type="text" id="nom" name="nom">
+
+            <label for="prenom">prenom</label>
+            <input placeholder="Jean" type="text" id="prenom" name="prenom">
+
+            <label for="email">email</label>
+            <input placeholder="dupont@gmail.com" type="email" name="email" id="email">
+
+            <input type="submit" value="Envoyer">
+
+        </form>
+
+    </main>
+    <footer></footer>
+</body>
+</html>

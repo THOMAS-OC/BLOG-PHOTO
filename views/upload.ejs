@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./contact.css">
+    <script src="contact.js"></script>
+
+    <title>Contact</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/home">Accueil</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+
+        <form action="/upload/send" method="post">
+
+            <label for="urlFile">urlFile</label>
+            <input required placeholder="insect.jpg" type="text" id="urlFile" name="urlFile">
+
+            <label for="urlFileCompressed">urlFileCompressed</label>
+            <input required placeholder="insect.min.jpg" type="text" id="urlFileCompressed" name="urlFileCompressed">
+
+            <label for="alt">texte alternatif</label>
+            <input placeholder="Description de la photos" type="text" name="alt" id="alt">
+
+            <label for="categorie-select">Choose a categorie:</label>
+            <select required name="categorie-select" id="categorie-select">
+                <option value="">--Please choose an categorie--</option>
+                <option value="macro">Macro</option>
+                <option value="paysage">Paysage</option>
+                <option value="bnw">BNW</option>
+            </select>
+
+            <label for="secretCode">Code secret</label>
+            <input required placeholder="code" type="password" name="secretCode" id="secretCode">
+
+
+            <input type="submit" value="Héberger">
+
+        </form>
+
+    </main>
+    <footer></footer>
+</body>
+</html>

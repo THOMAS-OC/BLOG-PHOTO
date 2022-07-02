@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./home.css">
+    <script src="home.js"></script>
+    <title>Arty</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/home">Accueil</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+
+        
+        <section class="galerie">
+
+
+            <% for( let index = 0; index < images.length; index++ ) { %>
+
+                <% if(images[index]['categorie'] == "macro") {%> 
+
+                    <img src="<%= images[index]['urlFile'] %>" alt="<%= images[index]['alt'] %>">
+
+                <% } %>
+
+            <% } %>
+
+            
+        </section>
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
