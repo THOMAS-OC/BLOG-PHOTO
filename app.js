@@ -20,11 +20,16 @@ app.get("/", (req, res) => {
 
 // ROUTE PAGE D'ACCUEIL
 app.get("/home", (req, res) => {
-    db.photoUpload.find({}, (err, docs)=>{
+    res.render("home.ejs")
+})
+
+// ROUTE PAGE ALBUM PHOTO
+app.get("/album/:name", (req, res) => {
+    db.photoUpload.find({categorie : req.params.name}, (err, docs)=>{
         images = docs
         console.log(images);
+        res.render("album.ejs", {images, title:req.params.name})
     })
-    res.render("home.ejs", {images})
 })
 
 // ROUTE PAGE CONTACT
@@ -34,7 +39,7 @@ app.get("/contact", (req, res) => {
 
 // ROUTE POST UPLOAD EMAIL
 app.post("/contact/sendEmail", (req, res) => {
-    res.render("post.ejs")
+    res.redirect("home.ejs")
 })
 
 // Route formulaire d'upload
@@ -64,6 +69,6 @@ app.post("/upload/send", (req, res) => {
     res.redirect("/")
 })
 
-app.listen(3100, () => {
+app.listen(3000, () => {
     console.log("Serveur lancé");
 })

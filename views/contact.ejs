@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/contact.css">
 
-    <script src="contact.js"></script>
+    <script defer src="contact.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,13 +33,13 @@
         <form action="/sendEmail" method="post">
 
             <label for="nom">nom</label>
-            <input placeholder="Dupont" type="text" id="nom" name="nom">
+            <input required placeholder="Dupont" type="text" id="nom" name="nom">
 
             <label for="prenom">prenom</label>
-            <input placeholder="Jean" type="text" id="prenom" name="prenom">
+            <input required placeholder="Jean" type="text" id="prenom" name="prenom">
 
             <label for="email">email</label>
-            <input placeholder="dupont@gmail.com" type="email" name="email" id="email">
+            <input required placeholder="dupont@gmail.com" type="email" name="email" id="email">
 
             <input type="submit" value="Envoyer">
 

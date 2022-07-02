@@ -15,6 +15,8 @@ header{
     width: 100vw;
     background-color: whitesmoke;
     box-shadow: 0px 10px 3px rgba(0, 0, 0, 0.80);
+    position: relative;
+    z-index: 2;
 }
 
 nav{
@@ -61,12 +63,16 @@ nav a:nth-child(1)::after{
     width: 60px;
 }
 
-
-
 /* END Layout header */
+
+
 h1{
     text-align: center;
-    color: black;
+    margin-top: 100px;
+    font-size: 60px;
+    font-family: serif;
+    color: white;
+    text-shadow: 0px 0px 3px white;
 }
 
 /* Layout galerie */
@@ -80,22 +86,45 @@ h1{
     flex-wrap: wrap;
     transition-duration: 1s;
     align-items: center;
+
 }
 
-.choiceGalerie > div {
+.choiceGalerie > a {
     height: 400px;
     width: 300px;
     background-color: black;
-    border: 2px dotted white;
+    border: 2px solid white;
     overflow: hidden;
     cursor: pointer;
     position: relative;
+    z-index: 1;
+    transition-duration: 0.3;
+    animation-name: cardSection;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    position: relative;
 }
 
-.choiceGalerie div:hover img {
+.choiceGalerie > a:nth-child(1){
+    animation-delay: 1s;
+}
+
+.choiceGalerie > a:nth-child(2){
+    animation-delay: 1.5s;
+}
+
+.choiceGalerie > a:nth-child(3){
+    animation-delay: 2s;
+}
+
+.choiceGalerie a:hover {
+    box-shadow: 0px 0px 30px whitesmoke;
+}
+
+.choiceGalerie a:hover img {
     transform: scale(1.2);
     filter: brightness(1);
-
 }
 
 .choiceGalerie img {
@@ -139,4 +168,28 @@ h1{
     height: 100%;
     object-fit: contain;
     object-position: center;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes cardSection {
+    from{
+        transform: translateY(1000px);
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+}
+
+.ml12 {
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+  
+.ml12 .letter {
+    display: inline-block;
+    line-height: 1em;
 }

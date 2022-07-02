@@ -11,14 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Splash&display=swap" rel="stylesheet"> 
 
     <!-- Style -->
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/home.css">
 
     <!-- Icone -->
 
 
     <!-- Javscript -->
     <script defer src="home.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <title>Arty</title>
 </head>
@@ -36,46 +37,33 @@
     
     <main>
 
+        <h1 class="ml12">Albums photos</h1>
 
         <section class="choiceGalerie">
             
-            <div>
+            <a href="/album/noir-et-blanc">
                 <img src="images/bnw_section.jpg" alt="Section noir et blanc">
                 <div class="curl">
                     <img src="images/curlRotate.png" alt="">
                 </div>
-            </div>
-            <div>
+            </a>
+            <a href="/album/macro">
                 <img src="images/macro_section.jpg" alt="Section macro">
                 <div class="curl">
                     <img src="images/curlRotate.png" alt="">
                 </div>
-            </div>
-            <div>
+            </a>
+            <a href="/album/paysage">
                 <img src="images/paysage_section.jpg" alt="Section paysage">
                 <div class="curl">
                     <img src="images/curlRotate.png" alt="">
                 </div>
-            </div>
+            </a>
 
         </section>
 
         
-        <section class="galerie">
 
-
-            <% for( let index = 0; index < images.length; index++ ) { %>
-
-                <% if(images[index]['categorie'] == "macro") {%> 
-                    <div>
-                        <img src="<%= images[index]['urlFileCompressed'] %>" alt="<%= images[index]['alt'] %>">
-                    </div>
-                <% } %>
-
-            <% } %>
-
-            
-        </section>
 
 
     </main>
