@@ -4,21 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Police -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Splash&display=swap" rel="stylesheet"> 
+
+    <!-- Style -->
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./home.css">
-    <script src="home.js"></script>
+
+    <!-- Icone -->
+
+
+    <!-- Javscript -->
+    <script defer src="home.js"></script>
+
     <title>Arty</title>
 </head>
 <body>
 
     <header>
         <nav>
-            <a href="/home">Accueil</a>
+            <a href="/home">Galerie</a>
             <a href="/contact">Contact</a>
+            <div>
+                <p>arty</p>
+            </div>
         </nav>
     </header>
     
     <main>
+
+
+        <section class="choiceGalerie">
+            
+            <div>
+                <img src="images/bnw_section.jpg" alt="Section noir et blanc">
+                <div class="curl">
+                    <img src="images/curlRotate.png" alt="">
+                </div>
+            </div>
+            <div>
+                <img src="images/macro_section.jpg" alt="Section macro">
+                <div class="curl">
+                    <img src="images/curlRotate.png" alt="">
+                </div>
+            </div>
+            <div>
+                <img src="images/paysage_section.jpg" alt="Section paysage">
+                <div class="curl">
+                    <img src="images/curlRotate.png" alt="">
+                </div>
+            </div>
+
+        </section>
 
         
         <section class="galerie">
@@ -27,9 +67,9 @@
             <% for( let index = 0; index < images.length; index++ ) { %>
 
                 <% if(images[index]['categorie'] == "macro") {%> 
-
-                    <img src="<%= images[index]['urlFile'] %>" alt="<%= images[index]['alt'] %>">
-
+                    <div>
+                        <img src="<%= images[index]['urlFileCompressed'] %>" alt="<%= images[index]['alt'] %>">
+                    </div>
                 <% } %>
 
             <% } %>

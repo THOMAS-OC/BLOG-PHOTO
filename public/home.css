@@ -27,6 +27,7 @@ nav{
     text-decoration: none;
     line-height: 100px;
     font-size: 35px;
+    position: relative;
 }
 
 nav a{
@@ -60,24 +61,82 @@ nav a:nth-child(1)::after{
     width: 60px;
 }
 
-/* END Layout header */
 
+
+/* END Layout header */
 h1{
     text-align: center;
     color: black;
 }
 
 /* Layout galerie */
-.galerie{
+.choiceGalerie{
     margin: 30px auto;
-    width: 800px;
+    width: 1200px;
+    max-width: 95vw;
     height: 800px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    transition-duration: 1s;
+    align-items: center;
+}
+
+.choiceGalerie > div {
+    height: 400px;
+    width: 300px;
+    background-color: black;
+    border: 2px dotted white;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.choiceGalerie div:hover img {
+    transform: scale(1.2);
+    filter: brightness(1);
+
+}
+
+.choiceGalerie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition-duration: 1s;
+    filter: brightness(0.8);
+}
+
+.curl{
+    background-image: url("/images/curlRotate.png");
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.galerie{
+    margin: 30px auto;
+    width: 800px;
+    max-width: 95vw;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: red;
+    transition-duration: 1s;
+    transform: translateX(-1000px);
+}
+
+.galerie div {
+    width: 240px;
+    height: 240px;
 }
 
 .galerie img {
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
