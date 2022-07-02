@@ -20,7 +20,8 @@ app.get("/", (req, res) => {
 
 // ROUTE PAGE D'ACCUEIL
 app.get("/home", (req, res) => {
-    res.render("home.ejs")
+    let titre = "Albums photos"
+    res.render("home.ejs", {titre})
 })
 
 // ROUTE PAGE ALBUM PHOTO
@@ -28,7 +29,7 @@ app.get("/album/:name", (req, res) => {
     db.photoUpload.find({categorie : req.params.name}, (err, docs)=>{
         images = docs
         console.log(images);
-        res.render("album.ejs", {images, title:req.params.name})
+        res.render("album.ejs", {images, titre:req.params.name})
     })
 })
 
