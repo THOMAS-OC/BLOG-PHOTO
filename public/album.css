@@ -1,5 +1,5 @@
 body{
-    background-image: url("images/background.jpg");
+    background-image: url("images/background-flou.jpg");
     background-position: center;
     background-attachment: fixed;
     width: 100vw;
@@ -67,10 +67,10 @@ nav a:nth-child(1)::after{
 
 
 
-h1{
+.ml12{
     text-align: center;
     margin-top: 100px;
-    font-size: 60px;
+    font-size: 3vw;
     font-family: serif;
     color: white;
     text-shadow: 0px 0px 20px white;
@@ -85,6 +85,7 @@ h1{
     margin: 100px auto;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 }
 
 .galerie > div{
@@ -93,6 +94,10 @@ h1{
     margin-bottom: 20px;
     border: 2px solid white;
     position: relative;
+    animation-name: photoAnimate;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
 }
 
 .galerie img{
@@ -141,10 +146,65 @@ h1{
     opacity: 1;
 }
 
+i{
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width : 1020px) {
+
+    .galerie{
+        width: 1000px;
+        max-width: 80vw;
+        height: auto;
+        display: flex;
+        margin: 100px auto;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width : 800px) {
+
+    .galerie{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ml12{
+        font-size: 6vw;
+    }
+
+}
+
 /* animations */
 
+@keyframes photoAnimate {
+
+    from{
+        opacity: 0;
+        transform: translateY(400px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+    
+}
+
 .ml12 {
-    font-weight: 200;
     text-transform: uppercase;
     letter-spacing: 0.5em;
 }
