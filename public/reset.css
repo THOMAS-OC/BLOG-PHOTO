@@ -57,18 +57,3 @@ a {
 	color: black;
 	text-decoration: none;
 }
-
-/* Style global */
-
-nav div {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 50px;
-}
-
-nav p{
-    position: relative;
-    font-family: 'Splash', cursive;
-}

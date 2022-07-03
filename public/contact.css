@@ -63,6 +63,35 @@ nav a:hover::after {
 
 /* END Layout header */
 
+/* LOGO */
+
+.logoInNav {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    font-family: 'Splash', cursive;
+}
+
+.logoInMain{
+    background-color: rgba(255, 255, 255, 0.285);
+    text-shadow: 0px 0px 6px white;
+    border: 2px solid white;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    line-height: 170px;
+    margin: 50px auto 0px auto;
+    margin-top: 50px;
+    display: none;
+    font-size: 80px;
+    font-family: 'Splash', cursive;
+    text-align: center;
+}
+
+/* END LOGO */
+
 /* CONTACT LAYOUT */
 
 form{
@@ -76,17 +105,22 @@ form{
     color: white;
 }
 
-input, select {
+input, select, textarea {
     border: none;
     border: 2px solid white;
     background-color: transparent;
     color: white;
     height: 30px;
-    border-radius: 8px;
+    border-radius: 3px;
+    resize : none;
     animation-name: toRight;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
+}
+
+textarea{
+    height: 100px;
 }
 
 option{
@@ -143,6 +177,7 @@ label {
     animation-iteration-count: 1;
     animation-fill-mode: both;
     animation-delay: 1s;
+    margin-left: 10px;
 }
 
 input[type="submit"]{
@@ -169,3 +204,25 @@ input[type="submit"]:hover{
 input[type="submit"]:focus{
     background-color: gray;
 }
+
+input:focus:valid{
+    border-bottom: 2px solid rgb(76, 255, 76);
+}
+
+input:focus:invalid{
+    border: 2px solid rgb(255, 29, 29);
+}
+
+
+/* RESPONSIVE LOGO */
+@media only screen and (max-width : 550px) {
+
+    .logoInNav{
+        display: none;
+    }
+
+    .logoInMain{
+        display: block;
+    }
+
+} 

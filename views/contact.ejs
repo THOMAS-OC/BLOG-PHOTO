@@ -22,13 +22,13 @@
         <nav>
             <a href="/home">Galerie</a>
             <a href="/contact">Contact</a>
-            <div>
-                <p>arty</p>
-            </div>
+            <p class="logoInNav">arty</p>
         </nav>
     </header>
     
     <main>
+
+        <p class="logoInMain">arty</p>
 
         <form action="/sendEmail" method="post">
 
@@ -39,7 +39,7 @@
             <input required placeholder="Jean" type="text" id="prenom" name="prenom">
 
             <label for="message">Message</label>
-            <input placeholder="Bonjour..." type="text" name="message" id="message">
+            <textarea placeholder="Bonjour..." name="message" id="message" cols="30" rows="10"></textarea>
 
             <label for="email">email</label>
             <input required placeholder="doudoulapinou@gmail.com" type="email" name="email" id="email">
