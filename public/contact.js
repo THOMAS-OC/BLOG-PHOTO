@@ -29,3 +29,8 @@ mailForm.addEventListener("keyup", (el) => {
 })
 
 // FIN Enregistrement du formulaire
+
+// Désactivation temporaire du bouton
+// document.querySelector("input[type='submit']").addEventListener("click",(el)=>{
+//     el.preventDefault()
+// })

@@ -55,7 +55,7 @@
 
                 <% if(images[index]['categorie'] == titre ) {%> 
                     <div>
-                        <img src="<%= images[index]['urlFileCompressed'] %>" alt="<%= images[index]['alt'] %>">
+                        <img loading="lazy" src="<%= images[index]['urlFileCompressed'] %>" alt="<%= images[index]['alt'] %>">
                         <div class="opaque">
                             <a target="_blank" href="<%= images[index]['urlDownload'] %>">Télécharger</a>
                         </div>

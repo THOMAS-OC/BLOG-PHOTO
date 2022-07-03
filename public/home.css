@@ -78,7 +78,7 @@ h1{
 /* Layout galerie */
 .choiceGalerie{
     margin: 30px auto;
-    width: 1200px;
+    width: 1300px;
     max-width: 95vw;
     height: 800px;
     display: flex;
@@ -87,6 +87,22 @@ h1{
     transition-duration: 1s;
     align-items: center;
 
+}
+
+.choiceGalerie > a h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    text-align: center;
+    line-height: 60px;
+    z-index: 50;
+    font-size: 30px;
+    font-family: 'Splash', cursive;
+    box-shadow: 0px 3px 3px black;
 }
 
 .choiceGalerie > a {
@@ -118,6 +134,10 @@ h1{
     animation-delay: 2s;
 }
 
+.choiceGalerie > a:nth-child(4){
+    animation-delay: 2.5s;
+}
+
 .choiceGalerie a:hover {
     box-shadow: 0px 0px 30px whitesmoke;
 }
@@ -145,30 +165,7 @@ h1{
     height: 100px;
 }
 
-.galerie{
-    margin: 30px auto;
-    width: 800px;
-    max-width: 95vw;
-    height: 800px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: red;
-    transition-duration: 1s;
-    transform: translateX(-1000px);
-}
 
-.galerie div {
-    width: 240px;
-    height: 240px;
-}
-
-.galerie img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-}
 
 
 /* ANIMATIONS */

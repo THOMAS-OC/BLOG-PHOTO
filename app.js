@@ -57,7 +57,7 @@ app.post("/upload/send", (req, res) => {
         authorize = true
         console.log('Enregistrement en BDD');
         db.photoUpload.create({
-            urlFile: req.body.urlFile,
+            urlDownload: req.body.urlFile,
             urlFileCompressed: req.body.urlFileCompressed,
             alt: req.body.alt,
             categorie: req.body['categorie-select']
