@@ -104,12 +104,19 @@ h1{
 
 .galerie a {
     font-size: 35px;
+    display: block;
+    text-align: center;
+    line-height: 300px;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     color: white;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    font-style: italic;
+    text-decoration: underline;
 }
 
 .opaque {
