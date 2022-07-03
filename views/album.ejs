@@ -37,7 +37,16 @@
     
     <main>
 
-        <h1 class="ml12"> Album <%= titre %>  </h1>
+        <% if (titre == "noir-et-blanc") { %>
+
+            <h1 class="ml12"> Album noir et blanc  </h1>
+            
+        <% } else { %>
+
+            <h1 class="ml12"> Album <%= titre %>  </h1>
+
+        <% } %> 
+            
 
         <section class="galerie">
 
@@ -47,6 +56,8 @@
                 <% if(images[index]['categorie'] == titre ) {%> 
                     <div>
                         <img src="<%= images[index]['urlFileCompressed'] %>" alt="<%= images[index]['alt'] %>">
+                        <a target="_blank" href="<%= images[index]['urlDownload'] %>">Télécharger</a>
+                        <div class="opaque"></div>
                     </div>
                 <% } %>
 

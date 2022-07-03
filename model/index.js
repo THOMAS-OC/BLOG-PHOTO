@@ -8,7 +8,8 @@ const uploadSchema = schema({
     urlFileCompressed: String,
     alt: String,
     categorie: String,
-    ordre: Number
+    order: Number,
+    urlDownload: String,
 })
 
 module.exports.photoUpload = mongoose.model('photo', uploadSchema)
